@@ -1,0 +1,35 @@
+body {
+	background-color: #f4f4f4;
+	padding: 20px;
+}
+
+.article-container {
+	padding: 20px;
+	background-color: white;
+	border-radius: 0.3125rem;
+	box-shadow: 0 2px 5px black;
+}
+
+.article-container h1 {
+	border-bottom: 2px solid black;
+	padding-bottom: 5px;
+}
+
+.article-container ul {
+	list-style: none;
+	padding: 0%;
+}
+
+.article-container li {
+	border-bottom: 1px dashed black;
+	padding: 10px;
+}
+
+.article-container a {
+	text-decoration: none;
+	color: black;
+}
+
+.article-container a:hover {
+	color: sandybrown;
+}

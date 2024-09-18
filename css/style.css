@@ -1,0 +1,29 @@
+/* 设置导航栏的宽度和高度，居中对齐 */
+.navbar {
+    width: 1200px;
+    height: 60px;
+    background-color: red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* 导航链接默认样式 */
+.nav-link {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: red;
+    padding: 10px 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 鼠标移入时的背景和文字颜色变化 */
+.nav-link:hover {
+    background-color: blue; /* 可以根据需求更改颜色 */
+    color: yellow; /* 可以根据需求更改颜色 */
+}

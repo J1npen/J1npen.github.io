@@ -186,6 +186,23 @@ body {
     color: #388E3C; /* 悬停时链接颜色变深 */
 }
 
+/* 按钮样式 */
+    .toggle-btn {
+        display: none; /* 默认情况下在桌面端不显示 */
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 18px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		}
+
+
 @media (max-width: 768px) {
     .main-container {
         max-width: 100%; /* 在移动设备上占据100%宽度 */
@@ -197,11 +214,16 @@ body {
     }
 	
     .profile-section {
-            display: none; /* 隐藏个人简介区域 */
+		display: none; /* 隐藏个人简介区域 */
         }
     
-        .content-section {
-            flex-basis: 10%; /* 内容展示区在移动端占据100%的宽度 */
+    .content-section {
+        flex-basis: 10%; /* 内容展示区在移动端占据100%的宽度 */
         }
-    }
+		
+	.toggle-btn {
+		display: block; /* 在移动端显示按钮 */
+		}
 }
+
+

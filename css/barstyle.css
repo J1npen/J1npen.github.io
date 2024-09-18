@@ -1,0 +1,30 @@
+body {
+	background-color: #7f7f7f;
+	padding: 10px;
+}
+
+.navi-bar {
+	width: 75rem;
+	height: 3.75rem;
+	align-items: center;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+}
+
+.navi-link {
+	width: 7.5rem;
+	background-color: red;
+	color: white;
+	text-align: center;
+	/* 在块中展示 */
+	display: inline-block;
+	padding: 10px 0;
+	/* 去除下划线 */
+	text-decoration: none;
+}
+
+.navi-link:hover {
+	background-color: #deb887;
+	color: blue;
+}

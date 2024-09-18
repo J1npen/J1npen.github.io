@@ -12,3 +12,19 @@ document.getElementById("wechaticon").addEventListener("click", function() {
                 console.error('复制失败：', error);
             });
         });
+		
+		
+// 获取按钮和个人简介区域
+const toggleButton = document.getElementById("toggleButton");
+const profileSection = document.getElementById("profileSection");
+
+// 点击按钮时切换显示状态
+toggleButton.addEventListener("click", function() {
+            if (profileSection.classList.contains("hidden")) {
+                profileSection.classList.remove("hidden");
+                toggleButton.textContent = "隐藏个人简介";
+            } else {
+                profileSection.classList.add("hidden");
+                toggleButton.textContent = "显示个人简介";
+            }
+        });
