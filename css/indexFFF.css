@@ -223,8 +223,12 @@ body {
 	}
 	
     .content-section {
-        flex-basis: 10%; /* 内容展示区在移动端占据100%的宽度 */
+        flex-basis: 100%; /* 内容展示区在移动端占据100%的宽度 */
         }
+		
+	.content-section.hidden {
+		display: none;
+	}
 		
 	.toggle-btn {
 		display: block; /* 在移动端显示按钮 */

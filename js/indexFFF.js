@@ -20,16 +20,16 @@ const profileSection = document.getElementById("profileSection");
 const contentSection = document.getElementById("contentSection");
 
 // 点击按钮时切换显示状态
-		toggleButton.addEventListener("click", function() {
-			if (profileSection.classList.contains("hidden")) {
-				// 显示个人简介，隐藏内容展示区
-				profileSection.classList.remove("hidden");
-				contentSection.classList.add("hidden");
-				toggleButton.textContent = "文章内容";
-			} else {
-				// 隐藏个人简介，显示内容展示区
-				profileSection.classList.add("hidden");
-				contentSection.classList.remove("hidden");
-				toggleButton.textContent = "个人简介";
-			}
-		});
+toggleButton.addEventListener("click", function() {
+	if (profileSection.classList.contains("hidden")) {
+		// 显示个人简介，隐藏内容展示区
+		profileSection.classList.remove("hidden");
+		contentSection.classList.add("hidden");
+		toggleButton.textContent = "文章内容";
+	} else {
+		// 隐藏个人简介，显示内容展示区
+		profileSection.classList.add("hidden");
+		contentSection.classList.remove("hidden");
+		toggleButton.textContent = "个人简介";
+	}
+});
