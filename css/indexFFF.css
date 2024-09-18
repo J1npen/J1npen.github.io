@@ -186,16 +186,6 @@ body {
     color: #388E3C; /* 悬停时链接颜色变深 */
 }
 
-/* 隐藏个人简介区域 */
-.hidden {
-	display: none;
-}
-
- /* 隐藏个人简介区域 */
-.profile-section.hidden {
-	display: none;
-}
-
 /* 按钮样式 */
     .toggle-btn {
         display: none; /* 默认情况下在桌面端不显示 */
@@ -227,6 +217,11 @@ body {
 		margin: 0 auto;
         }
     
+	/* 隐藏个人简介区域 */
+	.profile-section.hidden {
+		display: none;
+	}
+	
     .content-section {
         flex-basis: 10%; /* 内容展示区在移动端占据100%的宽度 */
         }
