@@ -1,0 +1,191 @@
+@media (max-width: 768px) {
+    .main-container {
+        max-width: 100%; /* 在移动设备上占据100%宽度 */
+        flex-direction: column; /* 让个人简介和内容展示区上下排列 */
+    }
+    .profile-section, .content-section {
+        flex-basis: 100%; /* 让两部分在移动端各占满100%宽度 */
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* 导航栏css */
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 20px;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: #ddd;
+}
+
+.logo{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.navlink{
+	list-style-type: none;
+	display: flex;
+}
+
+.navlink li {
+	margin-left: 20px;
+}
+
+.navlink a {
+	color: black;
+	text-decoration: none;
+	font-size: 18px;
+	transition: color 0.3s ease;
+}
+
+.navlink a:hover {
+	color: #4CAF50; /* 悬停时变为绿色 */
+}
+
+/* 个人简介区域样式 */
+.profile-section {
+	flex-basis: 25%; /* 个人简介区域占60%内部宽度的25% */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile {
+    text-align: center;
+    max-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover; /* 确保图片填满容器，避免变形 */
+    margin-bottom: 20px;
+}
+
+.profile h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.profile p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* 社交链接样式 */
+.social-links a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #4CAF50; /* 悬停时图标变为绿色 */
+}
+
+/* 内容展示区样式 */
+.content-section {
+    flex-basis: 70%; /* 内容展示区占据70%的宽度 */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.content-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-10px); /* 悬停时卡片上移 */
+}
+
+.content-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* 图片适应容器大小，保持比例 */
+}
+
+.content-info {
+    padding: 20px;
+}
+
+.content-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.content-info .date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.content-info .description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    text-decoration: none;
+    font-weight: bold;
+    color: #4CAF50;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #388E3C; /* 悬停时链接颜色变深 */
+}
+
+/* 页面布局设置 */
+.main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 60%; /* 设置页面内容区域为60%，左右各留20% */
+    margin: 0 auto; /* 自动居中 */
+    padding: 20px;
+    gap: 20px; /* 个人简介区域和内容展示区之间的间距 */
+}
