@@ -13,7 +13,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 15px 20px;
+	padding: 15px 100px;
 	position: sticky;
 	top: 0;
 	width: 100%;
@@ -204,6 +204,10 @@ body {
 
 
 @media (max-width: 768px) {
+	.navbar{
+		padding: 15px 20px;
+	}
+	
     .main-container {
         max-width: 100%; /* 在移动设备上占据100%宽度 */
         flex-direction: column; /* 让个人简介和内容展示区上下排列 */
