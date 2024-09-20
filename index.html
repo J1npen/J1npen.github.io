@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="author" content="卢建鹏"/>
+		<meta name="author" content="卢建鹏" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Jinpen's Website</title>
 		<link rel="icon" href="img/appleicon.webp" type="image/x-icon" />
@@ -10,17 +10,17 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	</head>
 	<body>
-		
+
 		<!-- 导航栏 -->
 		<nav class="navbar">
 			<div class="logo"><i class="far fa-heart"></i> Jinpen</div>
 			<ul class="navlink">
-				<li><a href="">主页</a></li>
+				<li><a href="index.html">主页</a></li>
 				<li><a href="">关于</a></li>
 				<li><a href="">联系我</a></li>
 			</ul>
 		</nav>
-	
+
 		<div class="main-container">
 			<!-- 个人简介区域 -->
 			<section class="profile-section hidden" id="profileSection">
@@ -29,23 +29,37 @@
 					<h2>Jinpen</h2>
 					<p>诞生于2004年的一枚大学生</p>
 					<div class="social-links">
-						
-							<i class="far fa-comment" id="wechaticon"></i>
-						
-						
-							<i class="far fa-envelope"></i>
-						
+
+						<i class="far fa-comment" id="wechaticon"></i>
+
+
+						<i class="far fa-envelope"></i>
+
 						<a href="https://github.com/JinpenX64" target="_blank">
 							<i class="fab fa-github"></i>
 						</a>
 					</div>
 				</div>
 			</section>
-			
+
 			<!-- 内容展示区 -->
 			<section class="content-section" id="contentSection">
 				<h2>所有内容</h2>
 				<div class="content-grid">
+
+					
+					<!-- 第二篇文章 -->
+					<div class="content-card">
+						<img src="img/article2.jpg" alt="文章图片2" class="content-image">
+						<div class="content-info">
+							<h3>你好世界</h3>
+							<p class="date">September 18, 2024 | Hello</p>
+							<p class="description">
+								这是我发布的第一篇文章
+							</p>
+							<a href="#" class="read-more">阅读全文...</a>
+					 </div>
+					</div>
 					
 					<!-- 第一篇文章 -->
 					<div class="content-card">
@@ -56,16 +70,17 @@
 							<p class="description">
 								这是我发布的第一篇文章
 							</p>
-							<a href="#" class="read-more">阅读全文...</a>
+							<a href="Articles/article1.html" class="read-more">阅读全文...</a>
 						</div>
 					</div>
+
 				</div>
 			</section>
 		</div>
-		
+
 		<!-- 切换按钮 -->
 		<button class="toggle-btn" id="toggleButton">个人简介</button>
-		
+
 		<script src="js/indexFFF.js" defer></script>
 	</body>
 </html>

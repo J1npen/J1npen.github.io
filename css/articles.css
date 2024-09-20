@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* 导航栏css */
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 100px;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: #ddd;
+}
+
+.logo{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.navlink{
+	list-style-type: none;
+	display: flex;
+}
+
+.navlink li {
+	margin-left: 20px;
+}
+
+.navlink a {
+	color: black;
+	text-decoration: none;
+	font-size: 18px;
+	transition: color 0.3s ease;
+}
+
+.navlink a:hover {
+	color: #4CAF50; /* 悬停时变为绿色 */
+}
+
+/* 页面布局设置 */
+.main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 90%; /* 设置页面内容区域为60%，左右各留20% */
+    margin: 0 auto; /* 自动居中 */
+    padding: 20px;
+    gap: 50px; /* 个人简介区域和内容展示区之间的间距 */
+}
+
+/* 目录栏 */
+.table-section {
+	flex-basis: 15%; /* 目录栏占内部宽度的15% */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0;
+}
+.table-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.table-section ul {
+    padding-left: 15px;
+}
+.table-section a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+.table-section a:hover {
+    color: #4CAF50;
+}
+
+/* 内容展示区样式 */
+.content-section {
+    flex-basis: 70%; /* 内容展示区占据70%的宽度 */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.article-content {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px; /* 增加弧度 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    background-color: #fff; /* 确保卡片背景为白色 */
+}
+.article-content h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.article-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.date {
+    display: block;
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* 页脚 */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+    margin-top: 20px;
+}
