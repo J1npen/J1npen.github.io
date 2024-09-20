@@ -72,6 +72,26 @@ body {
 .table-section ul {
     padding-left: 15px;
 }
+.table-section li {
+    margin-bottom: 10px;
+    position: relative;
+}
+.table-section li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #4CAF50;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+.table-section li:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
 .table-section a {
     color: #333;
     text-decoration: none;
@@ -118,4 +138,27 @@ body {
     padding: 20px;
     background-color: #ddd;
     margin-top: 20px;
+}
+
+/* 适配移动端 */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    .main-container {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0 auto;
+        gap: 0;
+        padding: 0;
+    }
+    .table-section {
+        display: none;
+    }
+    .content-section {
+        flex-basis: 100%;
+    }
+    .navbar {
+        padding: 15px 50px;
+    }
 }
