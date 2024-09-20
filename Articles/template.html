@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文章标题</title>
+    <title>{{文章标题}}</title>
     <link rel="stylesheet" href="../css/articles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <!-- 导航栏 -->
     <nav class="navbar">
-        <div class="logo"><i class="far fa-heart"></i> Jinpen</div>
+        <div class="logo"><a href="../index.html"><i class="far fa-heart"></i> Jinpen</a></div>
         <ul class="navlink">
-            <li><a href="../index.html">主页</a></li>
-            <li><a href="">关于</a></li>
-            <li><a href="">联系我</a></li>
+            <li><a href="../index.html" id="toindex">主页</a></li>
+            <li><a href="" id="about">关于</a></li>
+            <li><a href="" id="contact">联系我</a></li>
         </ul>
     </nav>
 
@@ -25,30 +25,16 @@
             <div>
                 <h2>目录栏</h2>
                 <ul>
-                    <li><a href="#">主题一</a></li>
+                    {{目录项}}
                 </ul>
             </div>
         </section>
         <!-- 文章区 -->
         <section class="content-section" id="contentSection">
             <div class="article-content">
-                <h1>文章标题</h1>
-                <span class="date">发布日期 | 分类</span>
-                <p>
-                    文章内容段落1
-                </p>
-                <p>
-                    文章内容段落2
-                </p>
-                <p>
-                    文章内容段落3
-                </p>
-                <p>
-                    文章内容段落4
-                </p>
-                <p>
-                    文章内容段落5
-                </p>
+                <h1>{{文章标题}}</h1>
+                <span class="date">{{发布日期}} | {{作者}}</span>
+                {{文章内容}}
             </div>
         </section>
     </div>
