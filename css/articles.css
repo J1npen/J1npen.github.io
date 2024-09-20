@@ -21,9 +21,27 @@ body {
 	background-color: #ddd;
 }
 
-.logo{
-	font-size: 24px;
-	font-weight: bold;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* 绿色字体 */
+    text-transform: uppercase; /* 字母大写 */
+    letter-spacing: 2px; /* 增加字母间距 */
+    transition: color 0.3s ease; /* 添加过渡效果 */
+}
+
+.logo:hover {
+    color: #4CAF50; /* 悬停时变为深色 */
+}
+
+.logo a {
+    color: inherit; /* 继承父元素颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    transition: color 0.3s ease; /* 添加过渡效果 */
+}
+
+.logo a:hover {
+    color: inherit; /* 悬停时保持颜色不变 */
 }
 
 .navlink{
@@ -145,6 +163,10 @@ body {
     .navbar {
         padding: 15px 20px;
     }
+    .logo i,
+    .navlink {
+        display: none; /* 隐藏导航栏图标和链接 */
+    }
     .main-container {
         flex-direction: column;
         max-width: 100%;
@@ -158,7 +180,5 @@ body {
     .content-section {
         flex-basis: 100%;
     }
-    .navbar {
-        padding: 15px 50px;
-    }
+    
 }
