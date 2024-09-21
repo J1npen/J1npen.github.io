@@ -7,8 +7,9 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open article1.html",
-            "file": "e:\\Compile\\Connent\\Connent.Web\\GithubWebSite\\Articles\\article1.html"
+            "name": "Open index.html",
+            "file": "e:\\Compile\\Connent\\Connent.Web\\github.io\\index.html"
+            // "file": "${file}"  //运行当前打开着的文件
         }
     ]
 }
