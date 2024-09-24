@@ -163,8 +163,16 @@ body {
     margin-bottom: 20px;
 }
 .article-content pre {
-    padding: 0px;
+    padding: 10px;
     background-color: #f9f9f9; /* 添加背景色 */
+    border: 1px solid #ccc; /* 添加边框 */
+    border-radius: 5px; /* 增加弧度 */
+    overflow-x: auto; /* 添加水平滚动条 */
+    font-family: 'Courier New', Courier, monospace; /* 使用等宽字体 */
+    font-size: 18px; /* 调整字体大小 */
+    line-height: 1.6; /* 调整行高 */
+    white-space: pre-wrap; /* 保留空格和换行 */
+    word-wrap: break-word; /* 自动换行 */
 }
 .article-content blockquote {
     border-left: 5px solid #4CAF50; /* 左侧添加绿色边框 */
@@ -238,11 +246,17 @@ body {
     .content-section {
         flex-basis: 100%;
     }
-    .article-content pre {
-        font-size: 14px; /* 调整字体大小 */
+    .article-content img {
+        display: none; /* 隐藏图片 */
+        width: 100%; /* 确保图片宽度适应屏幕 */
+        height: auto; /* 保持图片比例 */
+    }
+    pre {
+        font-size: 14px;  /* 调整字体大小 */
         padding: 10px; /* 增加内边距 */
-        overflow-x: auto; /* 添加水平滚动条 */
+        overflow-x: auto;  /* 添加水平滚动条 */
         max-width: 100%; /* 确保宽度不会超过屏幕 */
+        white-space: pre-wrap; /* 保留空格和换行 */
         word-wrap: break-word; /* 自动换行 */
     }
 }
