@@ -140,16 +140,16 @@ body {
 }
 .article-content h2 {
     font-size: 32px;
-    margin-bottom: 20px;
+    margin: 20px 0px 10px;
 }
 .article-content h3 {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin: 20px 0px 10px;
 }
 .article-content p {
     font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 20px;
+    line-height: 1.5;
+    margin: 10px 0px 5px;
 }
 .date {
     display: block;
