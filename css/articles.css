@@ -238,5 +238,11 @@ body {
     .content-section {
         flex-basis: 100%;
     }
-    
+    .article-content pre {
+        font-size: 14px; /* 调整字体大小 */
+        padding: 10px; /* 增加内边距 */
+        overflow-x: auto; /* 添加水平滚动条 */
+        max-width: 100%; /* 确保宽度不会超过屏幕 */
+        word-wrap: break-word; /* 自动换行 */
+    }
 }
