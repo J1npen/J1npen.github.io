@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/appleicon.webp" type="image/x-icon" />
-	<link rel="apple-touch-icon" sizes="180x180" href="../img/appleicon_180x180.webp"> <!-- 180x180的苹果图标 -->
-    <title>{{文章标题}}</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/appleicon_180x180.webp"> <!-- 180x180的苹果图标 -->
+    <title>文章标题</title>
     <link rel="stylesheet" href="../css/articles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -27,18 +27,40 @@
             <div>
                 <h2>目录栏</h2>
                 <ul>
-                    {{目录项}}
+                    <li><a href="#theme1">文章标题</a></li>
                 </ul>
             </div>
         </section>
         <!-- 文章区 -->
         <section class="content-section" id="contentSection">
             <div class="article-content">
-                <h1>{{文章标题}}</h1>
-                <span class="date">{{发布日期}} | {{作者}}</span>
-                {{文章内容}}
+                <h1>文章标题🌏</h1>
+                <span class="date">发布日期 | 分类</span>
+                <p id="theme1">
+                    文章简介
+                </p>
+                <p>
+                    文章内容段落1。
+                </p>
+                <p>
+                    文章内容段落2。
+                </p>
+                <p>
+                    文章内容段落3。
+                </p>
+                <p>
+                    文章内容段落4。
+                </p>
+                <p>
+                    联系方式：<a href="mailto:your-email@example.com" class="linkto">your-email@example.com</a>。
+                </p>
+                <p>
+                    结尾感谢语。
+                </p>
             </div>
         </section>
     </div>
+    <!-- 脚本区 -->
+    <script src="../js/articles.js" defer></script>
 </body>
 </html>

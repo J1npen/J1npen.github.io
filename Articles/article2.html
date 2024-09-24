@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/appleicon.webp" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/appleicon_180x180.webp">
+    <title>Java基础</title>
+    <!-- 引入 Prism.js 的 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css">
+    <link rel="stylesheet" href="../css/articles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo"><a href="../index.html"><i class="far fa-heart"></i> Jinpen</a></div>
+        <ul class="navlink">
+            <li><a href="../index.html" id="toindex">主页</a></li>
+            <li><a href="" id="about">关于</a></li>
+            <li><a href="" id="contact">联系我</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主要内容区 -->
+    <div class="main-container">
+        <!-- 目录栏 -->
+        <section class="table-section" id="profileSection">
+            <div>
+                <h2>目录栏</h2>
+                <ul>
+                    <li><a href="#theme1">Java 的入口方法</a></li>
+                    <li><a href="#theme2">类（Class）</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- 文章区 -->
+        <section class="content-section" id="contentSection">
+            <div class="article-content">
+                <h1>Java基础</h1>
+                <span class="date">September 25, 2024 | Study</span>
+                <h2 id="theme1">Java 的入口方法</h2>
+                <img src="../img/JavaIntry.jpg" alt="" width="500">
+                <p>
+                    Java 的入口方法是 main 方法。main 方法是所有 Java 程序的入口方法。
+                    当你运行一个 Java 程序时，JVM（Java 虚拟机）会寻找这个方法作为程序的起始点。main 方法的定义如下：
+                </p>
+                <pre><code class="language-java">
+public static void main(String[] args) {
+    // 代码块
+}
+                </code></pre>
+                <h2 id="theme2">类（Class）</h2>
+                <p>包（Package）下有Class文件（.java文件），类是与之同名的，对外公开的（Public）的模版或蓝图。</p>
+                <h3>类的属性</h3>
+                <p>类的属性是字段（Field），也就是类中定义的变量，用来表示该类的对象所具有的特征或状态。</p>
+                <pre><code class="language-java">    
+public class Car {
+    // 类的属性（字段）
+    public String brand;   // 品牌
+    public String color;   // 颜色
+    public int speed;      // 速度
+} </code>
+                </pre>
+                <h3>字段（Field）</h3>
+                <p>字段就是类的属性。字段声明指的是在类中定义这些变量的过程。字段声明的基本语法如下：</p>
+                <pre><code class="language-java">
+[访问修饰符] [数据类型] [字段名] [= 初始值];
+public int age;
+private String name = "John";
+                </code></pre>
+                <p>在上面的例子中，age 和 name 是两个字段。</p>
+                <h3>类的成员</h3>
+                <p>类的成员是类的组成部分，主要包括成员变量和成员方法两大类</p>
+                <p>其中<span class="important-points">成员变量=类的属性＝字段</span></p>
+                <h3>静态成员</h3>
+                <p class="indent">1.类的成员（非静态成员）</p>
+                <p class="equinox">属于对象：类的成员变量和方法属于类的每个对象。当创建一个类的对象时，每个对象都有自己独立的成员变量副本。</p>
+                <p class="equinox">对象级别：类的成员在每个对象中独立存在。也就是说，不同对象可以拥有不同的成员变量值。</p>
+                <p class="equinox">通过对象访问：必须通过对象来访问非静态成员，不能通过类直接访问。</p>
+                <pre><code class="language-java">
+public class Car {
+    public String brand;   // 类的成员变量
+    public int speed;      // 类的成员变量
+
+    public void accelerate() {   // 类的成员方法
+        speed += 10;
+    }
+}</code></pre>
+                <p class="indent">2.静态成员</p>
+                <p class="equinox">属于类：静态成员属于类，不属于对象。当创建一个类的对象时，不会为静态成员分配内存空间。</p>
+                <p class="equinox">类级别：静态成员在类中独立存在。也就是说，不同对象共享同一个静态成员。</p>
+                <p class="equinox">通过类访问：可以通过类直接访问静态成员，也可以通过对象访问。</p>
+                <pre><code class="language-java">
+public class Car {
+    public static int numberOfCars = 0;  // 静态变量
+
+    public Car() {
+        numberOfCars++;  // 每创建一个新对象，静态变量自增
+    }
+
+    public static void displayCarCount() {  // 静态方法
+        System.out.println("Total cars: " + numberOfCars);
+    }
+}
+                </code></pre>                    
+
+            </div>
+        </section>
+    </div>
+    <!-- 引入 Prism.js 的 JavaScript 文件 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="../js/articles.js" defer></script>
+</body>
+</html>

@@ -138,6 +138,14 @@ body {
     font-size: 40px;
     margin-bottom: 20px;
 }
+.article-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.article-content h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
 .article-content p {
     font-size: 18px;
     line-height: 1.8;
@@ -148,6 +156,46 @@ body {
     color: #666;
     font-size: 16px;
     margin-bottom: 10px;
+}
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.article-content pre {
+    padding: 0px;
+    background-color: #f9f9f9; /* 添加背景色 */
+}
+.article-content blockquote {
+    border-left: 5px solid #4CAF50; /* 左侧添加绿色边框 */
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #f9f9f9; /* 添加背景色 */
+}
+.article-content blockquote p {
+    margin: 0;
+}
+/* 重要点样式 */
+.article-content .important-points {
+    font-size: 20px;
+    color: #9c27b0; /* 紫色字体 */
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px; /* 增加弧度 */
+}
+.article-content .indent {
+    text-indent: 2em; /* 首行缩进2个字符 */
+}
+.article-content .equinox {
+    text-indent: 1em; /* 首行缩进1个字符 */
+    position: relative; /* 相对定位 */
+}
+
+.article-content .equinox::before {
+    content: '•'; /* 添加黑点 */
+    color: black; /* 黑点颜色 */
+    position: absolute; /* 绝对定位 */
+    left: -1em; /* 调整黑点位置 */
 }
 .article-content .linkto {
     color: #4CAF50; /* 绿色字体 */
