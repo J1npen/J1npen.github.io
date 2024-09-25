@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* 导航栏css */
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 100px;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: #ddd;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* 绿色字体 */
+    text-transform: uppercase; /* 字母大写 */
+    letter-spacing: 2px; /* 增加字母间距 */
+    transition: color 0.3s ease; /* 添加过渡效果 */
+}
+
+.logo:hover {
+    color: #4CAF50; /* 悬停时变为深色 */
+}
+
+.logo a {
+    color: inherit; /* 继承父元素颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    transition: color 0.3s ease; /* 添加过渡效果 */
+}
+
+.logo a:hover {
+    color: inherit; /* 悬停时保持颜色不变 */
+}
+
+.navlink{
+	list-style-type: none;
+	display: flex;
+}
+
+.navlink li {
+	margin-left: 20px;
+}
+
+.navlink a {
+	color: black;
+	text-decoration: none;
+	font-size: 18px;
+	transition: color 0.3s ease;
+}
+
+.navlink a:hover {
+	color: #4CAF50; /* 悬停时变为绿色 */
+}
+
+/* 页面布局设置 */
+.main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 90%; /* 设置页面内容区域为60%，左右各留20% */
+    margin: 0 auto; /* 自动居中 */
+    padding: 20px;
+    gap: 50px; /* 个人简介区域和内容展示区之间的间距 */
+}
+
+/* 目录栏 */
+.table-section {
+	flex-basis: 15%; /* 目录栏占内部宽度的15% */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0;
+}
+.table-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.table-section ul {
+    padding-left: 15px;
+}
+.table-section li {
+    margin-bottom: 10px;
+    position: relative;
+}
+.table-section li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #4CAF50;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+.table-section li:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.table-section a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+.table-section a:hover {
+    color: #4CAF50;
+}
+
+/* 内容展示区样式 */
+.content-section {
+    flex-basis: 70%; /* 内容展示区占据70%的宽度 */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.article-content {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px; /* 增加弧度 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    background-color: #fff; /* 确保卡片背景为白色 */
+}
+.article-content h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.article-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.article-content h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.article-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.date {
+    display: block;
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.article-content pre {
+    padding: 0px;
+    background-color: #f9f9f9; /* 添加背景色 */
+}
+.article-content blockquote {
+    border-left: 5px solid #4CAF50; /* 左侧添加绿色边框 */
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #f9f9f9; /* 添加背景色 */
+}
+.article-content blockquote p {
+    margin: 0;
+}
+/* 重要点样式 */
+.article-content .important-points {
+    font-size: 20px;
+    color: #9c27b0; /* 紫色字体 */
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px; /* 增加弧度 */
+}
+.article-content .indent {
+    text-indent: 2em; /* 首行缩进2个字符 */
+}
+.article-content .equinox {
+    text-indent: 1em; /* 首行缩进1个字符 */
+    position: relative; /* 相对定位 */
+}
+
+.article-content .equinox::before {
+    content: '•'; /* 添加黑点 */
+    color: black; /* 黑点颜色 */
+    position: absolute; /* 绝对定位 */
+    left: -1em; /* 调整黑点位置 */
+}
+.article-content .linkto {
+    color: #4CAF50; /* 绿色字体 */
+    text-decoration: underline; /* 添加下划线 */
+    font-weight: bold; /* 加粗字体 */
+    transition: color 0.3s ease; /* 添加过渡效果 */
+}
+
+.article-content .linkto:hover {
+    color: #388E3C; /* 悬停时变为深绿色 */
+}
+
+/* 页脚 */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+    margin-top: 20px;
+}
+
+/* 适配移动端 */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    .logo i,
+    .navlink {
+        display: none; /* 隐藏导航栏图标和链接 */
+    }
+    .main-container {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0 auto;
+        gap: 0;
+        padding: 0;
+    }
+    .table-section {
+        display: none;
+    }
+    .content-section {
+        flex-basis: 100%;
+    }
+    
+}
