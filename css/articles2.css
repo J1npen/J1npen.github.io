@@ -170,7 +170,7 @@ body {
     border: 1px solid #ccc; /* 添加边框 */
     border-radius: 5px; /* 增加弧度 */
     overflow-x: auto; /* 添加水平滚动条 */
-    font-family: 'Courier New', Courier, monospace; /* 使用等宽字体 */
+    font-family: "Fira Code", "Consolas", "Courier New", Courier, monospace; /* 使用等宽字体 */
     font-size: 18px; /* 调整字体大小 */
     line-height: 1.6; /* 调整行高 */
     white-space: pre-wrap; /* 保留空格和换行 */
@@ -268,7 +268,6 @@ body {
         font-size: 18px; /* 调整字体大小 */
     }
     .article-content pre {
-        font-weight: lighter; /* 调整字体粗细 */
         font-size: 14px;  /* 调整字体大小 */
         padding: 10px; /* 增加内边距 */
         overflow-x: auto;  /* 添加水平滚动条 */
