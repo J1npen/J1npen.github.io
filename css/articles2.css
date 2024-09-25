@@ -267,6 +267,7 @@ body {
         font-size: 18px; /* 调整字体大小 */
     }
     .article-content pre {
+        font-weight: lighter; /* 调整字体粗细 */
         font-size: 14px;  /* 调整字体大小 */
         padding: 10px; /* 增加内边距 */
         overflow-x: auto;  /* 添加水平滚动条 */
