@@ -46,24 +46,24 @@
                     Java 的入口方法是 main 方法。main 方法是所有 Java 程序的入口方法。
                     当你运行一个 Java 程序时，JVM（Java 虚拟机）会寻找这个方法作为程序的起始点。main 方法的定义如下：
                 </p>
-                <pre><code>public static void main(String[] args) {
+                <pre>public static void main(String[] args) {
     // 代码块
-}</code></pre>
+}</pre>
                 <h2 id="theme2">类（Class）</h2>
                 <p>包（Package）下有Class文件（.java文件），类是与之同名的，对外公开的（Public）的模版或蓝图。</p>
                 <h3>类的属性</h3>
                 <p>类的属性是字段（Field），也就是类中定义的变量，用来表示该类的对象所具有的特征或状态。</p>
-                <pre><code>public class Car {
+                <pre>public class Car {
     // 类的属性（字段）
     public String brand;   // 品牌
     public String color;   // 颜色
     public int speed;      // 速度
-} </code></pre>
+} </pre>
                 <h3>字段（Field）</h3>
                 <p>字段就是类的属性。字段声明指的是在类中定义这些变量的过程。字段声明的基本语法如下：</p>
-                <pre><code>[访问修饰符] [数据类型] [字段名] [= 初始值];
+                <pre>[访问修饰符] [数据类型] [字段名] [= 初始值];
 public int age;
-private String name = "John";</code></pre>
+private String name = "John";</pre>
                 <p>在上面的例子中，age 和 name 是两个字段。</p>
                 <h3>类的成员</h3>
                 <p>类的成员是类的组成部分，主要包括成员变量和成员方法两大类</p>
@@ -73,19 +73,19 @@ private String name = "John";</code></pre>
                 <p class="equinox">属于对象：类的成员变量和方法属于类的每个对象。当创建一个类的对象时，每个对象都有自己独立的成员变量副本。</p>
                 <p class="equinox">对象级别：类的成员在每个对象中独立存在。也就是说，不同对象可以拥有不同的成员变量值。</p>
                 <p class="equinox">通过对象访问：必须通过对象来访问非静态成员，不能通过类直接访问。</p>
-                <pre><code>public class Car {
+                <pre>public class Car {
     public String brand;   // 类的成员变量
     public int speed;      // 类的成员变量
 
     public void accelerate() {   // 类的成员方法
         speed += 10;
     }
-}</code></pre>
+}</pre>
                 <p class="indent">2.静态成员</p>
                 <p class="equinox">属于类：静态成员变量和方法属于类本身，而不是类的具体对象。所有对象共享同一个静态成员。</p>
                 <p class="equinox">类级别：静态成员在类加载时初始化，并且在整个程序运行期间存在，它们不会因为对象的创建或销毁而发生变化。</p>
                 <p class="equinox">通过类访问：静态成员可以通过类名直接访问，而无需创建对象。当然，也可以通过对象访问，但这不是最佳实践。</p>
-                <pre><code>public class Car {
+                <pre>public class Car {
     public static int numberOfCars = 0;  // 静态变量
 
     public Car() {
@@ -95,29 +95,29 @@ private String name = "John";</code></pre>
     public static void displayCarCount() {  // 静态方法
         System.out.println("Total cars: " + numberOfCars);
     }
-}</code></pre>  
+}</pre>  
                 <p>在这个例子中，numberOfCars 是一个静态变量，用来统计所有 Car 对象的数量，而 displayCarCount() 是一个静态方法，可以显示汽车总数。</p>
-                <pre><code>Car car1 = new Car();
+                <pre>Car car1 = new Car();
 Car car2 = new Car();
-Car.displayCarCount();  // 通过类名访问静态方法，输出：Total cars: 2</code></pre>
+Car.displayCarCount();  // 通过类名访问静态方法，输出：Total cars: 2</pre>
                 <h2 id="theme3">对象（Object）</h2>
                 <p>对象是类的实例</p>
-                <pre><code>// 创建两个 Car 对象
+                <pre>// 创建两个 Car 对象
    Car car1 = new Car("Toyota");  
 // 对象1的属性
    Car car2 = new Car("Honda");  
-// 对象2的属性</code></pre>
+// 对象2的属性</pre>
                 <h3>声明对象</h3>
                 <p>声明对象的过程包括两步</p>
                 <p>1.	声明对象的引用：声明一个变量，用来保存对象的引用（类似于指向对象的指针）。</p>
                 <p>2.	创建对象：使用 new 关键字调用类的构造方法，分配内存并初始化对象。</p>
-                <pre><code>Car myCar;            
+                <pre>Car myCar;            
 // 1. 声明对象的引用，myCar 是 Car 类的一个引用
 myCar = new Car();     
-//2. 创建对象，使用 new 关键字分配内存并初始化对象</code></pre>
+//2. 创建对象，使用 new 关键字分配内存并初始化对象</pre>
                 <p>可以将上面的两步简化为一步：</p>
-                <pre><code>Car myCar = new Car(); 
-// 声明并创建对象</code></pre>
+                <pre>Car myCar = new Car(); 
+// 声明并创建对象</pre>
                 <p>在这里:</p>
                 <p class="equinox">Car是类名</p>
                 <p class="equinox">myCar是对象名</p>
@@ -127,15 +127,15 @@ myCar = new Car();
                 <h3>类的成员和对象的关系</h3>
                 <p>类的成员（属性和方法）在类内定义，而实例化对象是没有限制的。</p>
                 <p class="indent">实例1.在其他类中创建对象（常见做法）</p>
-                <pre><code>public class Main {
+                <pre>public class Main {
     public static void main(String[] args) {
         Car car1 = new Car();  // 在 Main 类中创建 Car 类的对象
         car1.brand = "Toyota";
         car1.accelerate();
     }
-}</code></pre>
+}</pre>
                 <p class="indent">实例2.在同一类中创建对象</p>
-                <pre><code>public class Car {
+                <pre>public class Car {
     public String brand;
     public int speed;
 
@@ -143,7 +143,7 @@ myCar = new Car();
     public Car createAnotherCar() {
         return new Car();  // 在 Car 类的成员方法中创建对象
     }
-}</code></pre>
+}</pre>
                 
 
             </div>
