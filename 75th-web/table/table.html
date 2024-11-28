@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国数据展示</title>
+    <link rel="icon" href="../icon.svg" type="image/x-icon" />
+    <script src="../js/echarts.common.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #DE2910 35%, white);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .table-container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #DE2910;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>中国数据展示</h1>
+    </header>
+
+    <!-- 中国GDP增长table -->
+    <div class="table-container">
+        <h2 style="text-align: center; color: red; font-size: 2em;">近年来中国GDP增长情况</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>年份</th>
+                    <th>GDP (万亿元)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2018</td>
+                    <td>90.3</td>
+                </tr>
+                <tr>
+                    <td>2019</td>
+                    <td>98.65</td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>101.36</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>114.92</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>120.47</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>126.6</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 中国主要地区科技企业数量柱状图 -->
+    <div id="bar" style="width: 80%; height: 400px; margin: 50px auto;"></div>
+    <script>
+        var barDom = document.getElementById('bar');
+        var barChart = echarts.init(barDom);
+        var barOption;
+
+        barOption = {
+            title: {
+                text: '中国主要地区科技企业数量',
+                left: 'center'
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            xAxis: {
+                type: 'category',
+                data: ['北京', '上海', '深圳', '广州', '杭州', '成都']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+            {
+                name: '科技企业数量',
+                type: 'bar',
+                data: [1200, 1100, 900, 850, 800, 750],
+                itemStyle: {
+                    color: function(params) {
+                        // 定义每个柱子的颜色
+                        var colorList = ['#DE2910', '#FFDE00', '#00A1E9', '#7CFC00', '#FF4500', '#9400D3'];
+                        return colorList[params.dataIndex];
+                    }
+                }
+            }
+        ]
+        };
+        // 当窗口大小变化时，使图表自适应大小
+        window.addEventListener('resize', function() {
+            barChart.resize();
+        });
+        barOption && barChart.setOption(barOption);
+    </script>
+
+    <!-- 父容器 -->
+    <div style="display: flex; justify-content: space-between;padding: 0 5%;">
+        <!-- 各行业对GDP的贡献 -->
+        <div id="pie" style="width: 50%; height: 400px;"></div>
+        <script>
+            var pieDom = document.getElementById('pie');
+            var pieChart = echarts.init(pieDom);
+            var pieOption;
+
+            pieOption = {
+                title: {
+                    text: '各行业对中国GDP的贡献',
+                    left: 'center'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b} : {c} ({d}%)'
+                },
+                legend: {
+                    orient: 'vertical',
+                    left: 'left'
+                },
+                series: [
+                    {
+                        name: '行业贡献',
+                        type: 'pie',
+                        radius: '50%',  // 调整半径大小
+                        center: ['50%', '60%'],
+                        data: [
+                            {value: 40, name: '工业'},
+                            {value: 30, name: '服务业'},
+                            {value: 20, name: '农业'},
+                            {value: 10, name: '其他'}
+                        ],
+                        emphasis: {
+                            itemStyle: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        }
+                    }
+                ]
+            };
+            // 当窗口大小变化时，使图表自适应大小
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
+            pieOption && pieChart.setOption(pieOption);
+        </script>
+
+        <!-- 世界经济增长贡献率 -->
+        <div id="gauge" style="width: 50%; height: 400px;"></div>
+        <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+        <script>
+            var chartDom = document.getElementById('gauge');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                tooltip: {
+                    formatter: '{a} <br/>{b} : {c}%'
+                },
+                series: [
+                    {
+                        name: '世界经济增长贡献率',
+                        type: 'gauge',
+                        detail: {formatter: '{value}%'},
+                        data: [{value: 24.8, name: '贡献率'}],
+                        axisLine: {
+                            lineStyle: {
+                                width: 10
+                            }
+                        },
+                        splitLine: {
+                            length: 20,
+                            lineStyle: {
+                                width: 2
+                            }
+                        },
+                        pointer: {
+                            width: 5
+                        }
+                    }
+                ]
+            };
+            // 当窗口大小变化时，使图表自适应大小
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
+            option && myChart.setOption(option);
+        </script>
+    </div>
+    
+    <!-- 返回主页 -->
+    <div style="text-align: center; margin: 50px 0;">
+        <a href="../index.html#gdp-chart" style="
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #DE2910;
+            border-radius: 25px;
+            text-decoration: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        " onmouseover="this.style.backgroundColor='#FF4500'" onmouseout="this.style.backgroundColor='#DE2910'">
+            返回主页
+        </a>
+    </div>
+    
+</body>
+</html>

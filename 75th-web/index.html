@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辉煌七十五载，共绘时代华章</title>
+    <link rel="icon" href="icon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/echarts.common.js"></script>
+    
+</head>
+<body>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">国庆节快乐！</h1>
+            <p class="hero-subtitle">一起庆祝祖国母亲的75岁生日</p>
+        </div>
+    </section>
+    
+    <header>
+        <!-- 显示页面的主标题 -->
+        <h1>辉煌七十五载，共绘时代华章</h1>
+        <!-- 显示倒计时的区域 -->
+        <div class="countdown" id="countdown">中国诞生已经75年</div>
+    </header>
+
+    <div class="first-view">
+        <!-- 显示副标题 -->
+        <div id="linkmap" style="position: relative; display: inline-block;">
+            <!-- 红色五角星 -->
+            <img src="star-filled-svgrepo-com.svg" alt="" width="40px" style="position: absolute; top: -10px; left: -50px;">
+            <h1 style="display: inline;">庆祝中华人民共和国成立75周年</h1>
+        </div>
+    </div>
+
+    <!-- 中国地图 -->
+    <a href="map/map.html">
+        <div class="map-container">
+            <img src="chinamap.svg" alt="中国地图图片" class="animated-map">
+            <h2 class="map-caption">960万平方公里国土</h2>
+        </div>
+    </a>    
+
+    <!-- GDP增长图表 -->
+    <div id="gdp-chart" style="width: 80%; height: 500px; margin: 20px auto;"></div>
+
+    <!-- 中国科技发展版块 -->
+    <div id="tech-development" style="width: 80%; margin: 50px auto; padding: 30px; background-color: #ffffff; border-radius: 15px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);">
+        <h2 style="text-align: center; color: red; font-size: 2.5em; margin: 0 auto; display: block;">
+            <img src="confetti-left-svgrepo-com.svg" alt="" style="width: 1em; vertical-align: baseline;">
+            中国科技发展的辉煌成就
+            <img src="confetti-svgrepo-com.svg" alt="" style="width: 1em; vertical-align: baseline;">
+        </h2>
+        <!-- 图标展示区域 -->
+        <div id="icons" style="display: flex; justify-content: space-around; margin-top: 20px;">
+            <a href="article/technology/technology.html"><img src="technology-svgrepo-com.svg" alt="量子通讯" class="tech-icon" data-content="satellite" style="width: 50px; cursor: pointer;"></a>
+            <a href="article/wind/wind.html"><img src="wind-svgrepo-com.svg" alt="风力" class="tech-icon" data-content="space" style="width: 50px; cursor: pointer;"></a>
+            <a href="article/fly/fly.html"><img src="fly-svgrepo-com.svg" alt="飞机" class="tech-icon" data-content="ai" style="width: 50px; cursor: pointer;"></a>
+            <a href="article/brain/brain.html"><img src="robot-svgrepo-com.svg" alt="机器人" class="tech-icon" data-content="robot" style="width: 50px; cursor: pointer;"></a>
+            <a href="article/tianyan/tianyan.html"><img src="telescope-svgrepo-com.svg" alt="望远镜" class="tech-icon" data-content="telescope" style="width: 50px; cursor: pointer;"></a>
+        </div>
+
+        <!-- 文章展示区域 -->
+        <div id="tech-article" style="margin-top: 10px;">
+            <p>中国科技在近些年不断取得突破性进展，展示了强大的创新能力和技术实力。在量子通信、航空工业、深海能源、天文观测和脑机接口等前沿科技领域，中国科学家和工程师们通过不懈的努力，实现了一项项令人瞩目的成就。这些科技突破不仅提升了中国的国际地位，也为全球的科技发展注入了强劲动力。</p>
+            <p>首先，中国在量子通信领域取得了全球瞩目的成就。通过开发高速量子密钥分发系统，中国科学家创下了110 Mb/s的传输速度世界纪录。这一技术突破使得信息传输更加安全，并推动了量子通信从实验室走向实际应用，奠定了未来量子网络发展的基础，此外，中国自主研发的C919大型客机也标志着中国航空工业进入全球竞争舞台。作为中国首款自主设计的大型商用飞机，C919不仅在技术上达到了国际标准，还带动了中国航空产业链的全面升级。</p>
+            <p>在可再生能源领域，中国的深海浮动风力发电平台展示了领先的工程技术和环保意识。该平台能够在深海中运行，为海上油田提供清洁能源，体现了中国在绿色能源发展中的领导力​。与此同时，FAST望远镜的纳赫兹引力波发现，为人类进一步揭示宇宙深处的奥秘提供了重要线索。这一发现不仅提升了中国在天文学界的地位，还为全球科学家提供了前所未有的数据支持。</p>
+            <p>此外，中国在脑机接口技术上的突破性进展为未来人机交互开辟了新的可能性。通过成功完成灵长类动物的脑机接口实验，中国科学家展示了这一技术在医疗、人工智能等领域的广阔应用前景。最后，中国的太阳活动监测阵列项目则为全球应对太阳风暴等极端天气现象提供了重要的技术支持，保护了地球的通讯和电力系统。</p>
+            <p>这些成就不仅展示了中国在科技领域的创新能力，也体现了国家对推动绿色发展、保护地球、以及探索宇宙奥秘的坚定承诺。中国正以强大的科研实力，迈向科技创新的未来，引领全球科技进步的浪潮。</p>
+        </div>
+    </div>
+
+    <!-- 中国佳景 -->
+    <h2 style="text-align: center; color: red; font-size: 2.5em; margin: 0 auto; display: block;position: relative;top: 60px;">
+        中国佳景
+    </h2>
+    <div class="expandingcards">
+        <div class="panel active" style="background-image: url('greatwall.jpg')">
+        <h3>中国长城</h3>
+        </div>
+        <div class="panel" style="background-image: url('cctv.jpg')">
+        <h3>中央电视台总部大楼</h3>
+        </div>
+        <div class="panel" style="background-image: url('tulou.jpg')">
+        <h3>南靖土楼</h3>
+        </div>
+        <div class="panel" style="background-image: url('yunan.jpg')">
+        <h3>云南滇东</h3>
+        </div>
+        <div class="panel" style="background-image: url('neimen.jpg')">
+        <h3>中国内蒙古</h3>
+        </div>
+    </div>
+    
+    <script src="js.js"></script>
+</body>
+</html>
